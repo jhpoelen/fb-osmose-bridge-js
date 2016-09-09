@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>OSMOSE configuration generation example page</title>
+</head>
+<body>
+<script src="../dist/fb-osmose-bridge.js" type="text/javascript"></script>
+<script>
+    var functionalGroups = [
+        {
+            "name": "Amberjacks",
+            "type": "focal",
+            "taxa": [
+                {
+                    "name": "Seriola dumerili",
+                    "url": "http://fishbase.org/summary/1005"
+                }
+            ]
+        },
+        {
+            "name": "Echinoderms and large gastropods",
+            "type": "background",
+            "taxa": [
+                {
+                    "name": "Echinus esculentus",
+                    "url": "http://sealifebase.org/summary/49996"
+                }
+            ]
+        }
+    ];
+
+    // this example triggers a osmose configuration download on loading this page into a browser.
+    var generateConfig = osmose.generateConfig(functionalGroups, function(err, resp, body) {
+        window.location = resp.url;
+    });
+</script>
+</body>
+</html>

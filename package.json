@@ -1,0 +1,42 @@
+{
+    "name": "fb-osmose-bridge-js",
+    "version": "0.0.1",
+    "description": "helps to generate osmose configuration",
+    "main": "index.js",
+    "scripts": {
+        "test": "testling -u",
+        "build": "browserify . --standalone osmose -o dist/fb-osmose-bridge.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jhpoelen/fb-osmose-bridge-js.git"
+    },
+    "keywords": [
+        "fish",
+        "osmose",
+        "simulation",
+        "fishbase"
+    ],
+    "author": "jhpoelen",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jhpoelen/fb-osmose-bridge-js/issues"
+    },
+    "homepage": "https://github.com/jhpoelen/fb-osmose-bridge-js#readme",
+    "testling": {
+        "files": "test/*.js",
+        "browsers": [
+            "ie8",
+            "ie9",
+            "ff/13",
+            "chrome/20"
+        ]
+    },
+    "devDependencies": {
+        "tape": "^4.6.0"
+    },
+    "dependencies": {
+        "jquery": "^3.1.0",
+        "xhr": "^2.2.2"
+    }
+}
