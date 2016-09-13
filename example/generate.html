@@ -3,6 +3,7 @@
     <title>OSMOSE configuration generation example page</title>
 </head>
 <body>
+configuration has been requested . . . download links should appear -->
 <script src="../dist/fb-osmose-bridge.js" type="text/javascript"></script>
 <script>
     var functionalGroups = [
@@ -28,9 +29,17 @@
         }
     ];
 
+    var config = {
+        "timeStepsPerYear" : 11,
+        "groups" : functionalGroups
+    };
+
     // this example triggers a osmose configuration download on loading this page into a browser.
-    var generateConfig = osmose.generateConfig(functionalGroups, function(err, resp, body) {
-        window.location = resp.url;
+    var generateConfig = osmose.generateConfig(config, function(err, url) {
+        var downloadLink = document.body.appendChild(document.createElement("a"));
+        downloadLink.textContent = "click to download";
+        downloadLink.download = "osmose_config.zip";
+        downloadLink.href = url;
     });
 </script>
 </body>
