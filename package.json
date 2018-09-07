@@ -1,15 +1,15 @@
 {
-    "name": "fb-osmose-bridge-js",
-    "version": "0.0.1",
+    "name": "osmose-web-api-js",
+    "version": "0.0.2",
     "description": "helps to generate osmose configuration",
     "main": "index.js",
     "scripts": {
         "test": "testling -u",
-        "build": "browserify . --standalone osmose -o dist/fb-osmose-bridge.js"
+        "build": "browserify . --standalone osmose -o dist/osmose-web-api.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jhpoelen/fb-osmose-bridge-js.git"
+        "url": "git+https://github.com/osmose-model/osmose-web-api-js.git"
     },
     "keywords": [
         "fish",
@@ -20,9 +20,9 @@
     "author": "jhpoelen",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/jhpoelen/fb-osmose-bridge-js/issues"
+        "url": "https://github.com/jhpoelen/osmose-web-api-js/issues"
     },
-    "homepage": "https://github.com/jhpoelen/fb-osmose-bridge-js#readme",
+    "homepage": "https://github.com/jhpoelen/osmose-web-api-js#readme",
     "testling": {
         "files": "test/*.js",
         "browsers": [
